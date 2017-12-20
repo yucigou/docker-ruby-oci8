@@ -9,4 +9,8 @@ RUN cd /opt/oracle && unzip -q \*.zip
 RUN cd /opt/oracle/instantclient_12_1 && ln -s libclntsh.so.12.1 libclntsh.so
 ENV LD_LIBRARY_PATH /opt/oracle/instantclient_12_1
 
-RUN gem install ruby-oci8
+RUN gem install ruby-oci8 httparty
+
+RUN mkdir /webhook_reg
+
+ENV NLS_LANG AMERICAN_AMERICA.WE8ISO8859P1

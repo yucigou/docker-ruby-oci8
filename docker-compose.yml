@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  webhook_reg:
+    image: epmc/webhook_reg
+    build:
+      context: .
+    volumes:
+      - ./app:/webhook_reg
+#volumes:
+#  ./app:
